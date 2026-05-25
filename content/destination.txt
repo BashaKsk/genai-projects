@@ -1,0 +1,35 @@
+Sample Text File
+================
+
+This is a sample text file created for demonstration purposes.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+Section 1: Introduction
+-----------------------
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+in culpa qui officia deserunt mollit anim id est laborum.
+
+Section 2: Data
+---------------
+Name        Age     City
+Alice       30      New York
+Bob         25      San Francisco
+Charlie     35      London
+Diana       28      Tokyo
+
+Section 3: Notes
+----------------
+- This file can be used for testing file-handling operations.
+- It contains plain text with multiple sections.
+- Useful for parsing, reading, and text-processing exercises.
+
+End of file.
+appending , hello world!
+this is a new line!
+First line 
+Second line 
+Third line 
