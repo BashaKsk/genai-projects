@@ -1,0 +1,5 @@
+The quick brown fox jumps over the lazy dog.
+Python makes file handling simple and intuitive.
+You can read this file line by line or all at once.
+Standard library modules like os, sys, and pathlib are very useful.
+Practice makes perfect — keep exploring!
