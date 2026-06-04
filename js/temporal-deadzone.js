@@ -72,7 +72,7 @@ const k = 1;
 {
     const k = 2;
 
-    var k = 12;
+    // var k = 12;
 
     {
         const k = 3;
