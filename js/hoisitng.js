@@ -18,3 +18,6 @@ var getVarName = () => {
 getName()
 
 console.log(getName) // print the funciton itself
+
+
+// Hoisting is the process by which JavaScript allocates memory for variables and functions before executing the code.
