@@ -285,7 +285,7 @@ let lo = 0
 
 let hi = nums.length -1
 
-while(lo < hi) {
+while(lo <= hi) {
 
   const mid = Math.floor((lo+hi) / 2);
 
