@@ -58,35 +58,155 @@ Bias for Action, Learn and Be Curious, Deliver Results.
 
 ---
 
-## 4. MY STORY BANK (draft — fill the [brackets])
+## 4. MY STORY BANK (ordered to follow the 16 LPs above)
 
-### Story A — "Unblocked another team" → Ownership, Bias for Action, Earn Trust
-- **S:** Another team was building [what feature] and was behind / about to miss a
-  deadline that mattered because [why].
-- **T:** I was brought in to get them unblocked and back on track.
-- **A:** I found the real issue wasn't coding — they were **stuck on decisions**.
-  So I drove the design: defined **mock API responses** and the **DB structure**
-  from the PRD, recommended **react-hook-form** and clear **design patterns in
-  Nest.js**, designed the APIs, and handed them a clear blueprint to execute.
-- **R:** ⚠️ [FILL: did they deliver? on time? how many days saved? what shipped?]
+### 🗺️ ONE story per principle + the exact angle to emphasize
+*(Stories repeat — that's fine. The key is the ANGLE you stress for each LP.)*
 
-### Story B — "GenAI traceability graph" → Learn & Be Curious, Deliver Results, Ownership
-*(KEYSTONE STORY — strongest for this AI role)*
-- **S:** Asked to build a **requirements traceability graph** using **Neo4j** with a
-  **GenAI chatbot** to answer questions about the trace. I'd **never used a graph
-  database** before.
+| # | Leadership Principle | Story | The angle to emphasize for THIS principle |
+|---|----------------------|-------|-------------------------------------------|
+| 1 | Customer Obsession | **Story 1** (OEE) | "I built split/merge **because that's how operators actually work** — I started from the user." |
+| 2 | Ownership | **Story 2** (C-Trace) | "My CEO pulled me into **another team's** problem and I **took full ownership** of fixing it." |
+| 3 | Invent and Simplify | **Story 6** (Pattern Intelligence) | "I **invented the segments-based Machine Timeline** — color-coded uptime/downtime/idle so users see machine state **at a glance**, instead of reading **forms** like before. Plus per-machine **load graphs**." |
+| 4 | Are Right, A Lot | **Story 9** (schema) | "My **array-vs-flat** data-model judgment was right — it got adopted and held up." |
+| 5 | Learn and Be Curious | **Story 3** (GenAI graph) | "**Never used Neo4j** — learned it from scratch (docs + course + demo), then shipped." |
+| 6 | Hire and Develop the Best | **Story 4** (interns) | "Taught **design-first + patterns**; a couple got placed at **top MNCs**." |
+| 7 | Insist on Highest Standards | **Story 5** (email bug) | "After the failure I built a **verify-every-feature-in-prod checklist** — raised the bar." |
+| 8 | Think Big | **Story 6** (Pattern Intelligence) | "Turned a small **MVP into a full analytics product** with load graphs + insights." |
+| 9 | Bias for Action | **Story 7** (same-day) | "**Same-day deadline** — I took it on and shipped it that day." |
+| 10 | Frugality | **Story 7** (same-day) | "**Used AI tools** to deliver fast with limited time — more with less." |
+| 11 | Earn Trust | **Story 5** (email bug) | "Owned the failure **transparently** — sent customers a **fallback email**." |
+| 12 | Dive Deep | **Story 8** (PDF bug) | "**Root-caused** why charts were blank in Puppeteer PDFs (scripts not injected)." |
+| 13 | Have Backbone; Disagree & Commit | **Story 9** (schema) | "Pushed back on a **senior dev with data**, respectfully — and would commit if overruled." |
+| 14 | Deliver Results | **Story 6** (Pattern Intelligence) | "**Shipped** the full product; client got real-time machine visibility." |
+| 15 | Strive to be Earth's Best Employer | **Story 4** (interns) | "**Invested in juniors' growth** — they advanced their careers." |
+| 16 | Success & Scale → Broad Responsibility | **Story 6** (Pattern Intelligence) | "Built reports clients **rely on daily** — delivered responsibly at client scale." |
+
+> 🔑 Same story, different **lens**. E.g. Story 5 = *Insist on Highest Standards* (the
+> checklist) OR *Earn Trust* (the honest fallback email) — just emphasize the matching part.
+
+---
+
+### Story 1 — "OEE factory forms" → Customer Obsession (+ Invent & Simplify, Ownership, Dive Deep)
+- **S:** I worked on an **OEE (Overall Equipment Efficiency)** system — a factory tool
+  that tracks machine performance: availability, production counts, and downtime.
+- **T:** I owned the **data-entry forms** factory operators use — a **downtime form**
+  and a **production form**.
+- **A:** I built features around how operators *actually* work:
+  - **Downtime form:** a single downtime often spanned a long duration, but operators
+    needed to **split it into segments and assign a distinct reason to each** part. I
+    built a duration-splitting feature for exactly that.
+  - **Production form:** with so many records, operators couldn't enter production
+    counts efficiently — so I built a **"merge all"** feature to handle them in bulk.
+- **R:** Shipped as an **MVP, tested with our first client — it was a success**, which
+  became the foundation we built **Pattern Intelligence** on top of.
+  ⚠️ [optional: add operator-level impact — faster/more accurate logging, if you have it]
+
+### Story 2 — "Unblocked the C-Trace team" → Ownership (+ Bias for Action, Invent & Simplify, Dive Deep, Earn Trust)
+- **S:** Another team was building **C-Trace** — lots of UI forms + APIs. The target was
+  **one form per day**, but they were **badly lagging**. My **CEO pulled me in** to help.
+- **T:** Get the team unblocked and back on pace.
+- **A:** I dug into their frontend and backend and found the root causes: they weren't
+  using key libraries like **React Hook Form**, the backend had **no design patterns**
+  (e.g. strategy pattern), and they were building UI + backend **with no defined API
+  response structures**. So I introduced a **process**: after the PRD, the team first
+  writes a **TRD (Technical Requirement Document)** defining the **DB schema, the APIs,
+  and mock API responses**. With the mock response agreed up front, **frontend and
+  backend could build in parallel** against it, then just plug in the real API.
+- **R:** This **unblocked the bottleneck** — frontend and backend no longer waited on
+  each other, and the team's velocity recovered back toward the one-form-per-day target.
+  ⚠️ [even stronger: "they delivered C-Trace on time" or "went from stalled to shipping
+  in X days" — add if true]
+
+### Story 3 — "GenAI seafood traceability graph" → Learn & Be Curious (+ Deliver Results, Ownership, Invent & Simplify)
+*(KEYSTONE STORY — strongest for this AI role. LEAD WITH IT.)*
+- **S:** In **C-Trace** (a **seafood/shrimp processing traceability** system), shrimp
+  moves through stages — **beheading → grading → peeling → soaking** — and gets sorted
+  into multiple grades. I was asked to build a **knowledge graph** in **Neo4j** that
+  connects all those stages, plus a **GenAI chatbot** to answer questions about it. I'd
+  **never used a graph database** before.
 - **T:** Learn graph DBs well enough to design and ship the whole feature.
 - **A:** Broke it into my two unknowns — **Neo4j** and **Cypher**. Learned via the
   **official docs** + a **Udemy course**, **built a small demo first** to de-risk,
-  then built the real thing: **React** UI, **Python** backend, Cypher queries, and
-  integrated the **GenAI** chatbot.
-- **R:** Shipped & deployed end-to-end. The **CEO was impressed**.
-  ⚠️ [ADD impact: what did it let users DO? e.g. "trace X across systems in seconds"]
+  then built the real thing: **React** UI, **Python** backend, Cypher queries modeling
+  the processing stages as connected nodes, and integrated a **GenAI chatbot** scoped to
+  a specific **batch and PO (purchase order)**.
+- **R:** Shipped & deployed end-to-end. Users can now **trace a shrimp batch across the
+  entire processing pipeline just by looking at the connected nodes**, and **ask the
+  chatbot questions about that batch/PO in plain English** — instead of manually tracking
+  it through stages. The **CEO was impressed**.
 - **Likely follow-up:** "Hardest part of learning the graph DB?" →
   "Shifting from SQL tables to nodes-and-relationships, and thinking in Cypher's
   pattern-matching syntax."
 
-### Story C — "PDF chart bug" → Dive Deep (or Failure, if it reached users)
+### Story 4 — "Mentoring interns" → Hire & Develop the Best (+ Insist on Highest Standards, Ownership, Earth's Best Employer)
+- **S:** At my current company I **hired a couple of interns** and was responsible for
+  training them to contribute to our work.
+- **T:** Get them productive quickly and raise their engineering quality.
+- **A:** I taught them to **design first, code second** — think through the design before
+  jumping into code, which makes the coding cleaner later. I did regular **code reviews**
+  with them, and grounded them in **design patterns** — strategy pattern, factory method, etc.
+- **R:** The interns grew significantly — they **valued the mentorship**, and **a couple
+  of them went on to get placed at top MNCs** after their time with us. The coding
+  standards I taught (which I'd picked up working with **Canada clients**) raised their
+  bar early in their careers.
+
+### Story 5 — "Email reports broke (names→IDs migration)" → Insist on Highest Standards / FAILURE (+ Ownership, Learn & Be Curious, Earn Trust)
+*(Use this for the "tell me about a failure" question — almost always asked.)*
+- **S:** Our codebase filtered everything on machine **names**; I migrated it to
+  **MongoDB IDs** for proper uniqueness. This touched our two report automations —
+  **WhatsApp and email**.
+- **T:** I owned the migration and verifying the reports still worked afterward.
+- **A (the mistake):** I tested the **WhatsApp** report path after the change and it
+  worked. I then **assumed email would behave identically** — so not only did I skip
+  testing the email path, I **told the testers it didn't need re-testing.** *(Own it
+  fully: my assumption, my call — don't blame the testers.)*
+- **R (consequence + lesson):** The **email reports broke in production** — a
+  customer-facing failure caused by my assumption. I owned it and fixed it
+  **within ~30–60 minutes** (the working WhatsApp path made the fix fast to locate), and I
+  **proactively sent customers a fallback email** owning that it was a technical issue on
+  our end. **The lesson:** I never assume parity between similar-looking paths. Since then
+  I keep a **spreadsheet/checklist and verify every feature in production after each
+  deploy** — even the ones I'm sure about.
+
+### Story 6 — "Pattern Intelligence" → Think Big (+ Customer Obsession, Deliver Results, Invent & Simplify, Success & Scale)
+- **S:** After OEE succeeded as an MVP with our first client, we built **Pattern
+  Intelligence** — a more advanced machine-analytics product built on top of OEE.
+- **T:** I specifically built and owned the **segments module**, the **load graphs**,
+  and the **automated email + WhatsApp report delivery** to customers.
+- **A:** *(use "I" throughout)* The standout: I **invented a color-coded Machine
+  Timeline** — **green = uptime, red = downtime, yellow = idle** — so users can see, at a
+  glance, exactly **when each machine was up or down across the day**. **Before this, in
+  OEE, users had to read through forms / raw data** to work that out. I also built the
+  per-machine **load graphs** (electrical **IR & current values** across 24 hours and
+  shifts), the **segment-based daily performance reports**, and **automated report
+  delivery via both email AND WhatsApp** — meeting customers wherever they already were.
+- 💡 *Invent & Simplify angle: I turned "read the forms/raw data" (OEE) into "glance at a
+  color-coded timeline" (Pattern Intelligence). That before→after is the whole story.*
+- **R:** It gave the client **at-a-glance machine visibility** — color-coded segment
+  views (**red = downtime, green = uptime, yellow = idle**) and **load graphs** of
+  **current & IR values across 24 hours and shifts** — plus **automated daily/weekly
+  headline & consumption reports** (by email + WhatsApp) and an in-platform **feedback
+  form**. This let the client **monitor machine health in real time and catch
+  performance issues faster**, instead of digging through raw data.
+  ⚠️ [even stronger if you can add a number: # of clients/machines, or downtime reduced]
+
+### Story 7 — "Same-day shift-level deviation" → Bias for Action (+ Deliver Results, Ownership, Frugality)
+- **S:** After customers logged downtime segments, we calculated a **deviation** metric.
+  It was computed at the **day level**, but factory teams work in **shifts** — so they
+  needed deviation at the **shift level** too, in batch.
+- **T:** It had to be delivered **that same day** — a hard deadline. I **took it on
+  myself** to build it.
+- **A:** I built the **shift-level deviation calculation**. The tricky part: **shift
+  timings vary**, so the batch logic had to handle changing shift windows, not a fixed
+  day boundary. To move fast under the deadline, I **leveraged AI tools** to accelerate
+  development without cutting corners.
+- **R:** We **delivered it the same day** and it worked at shift level.
+  ⚠️ [optional: confirm correctness / that the customer got exactly what they needed]
+- 💡 *Using AI tools to hit a same-day deadline = Bias for Action + resourcefulness;
+  great detail for an AI-focused role.*
+
+### Story 8 — "PDF chart bug" → Dive Deep (or Failure, if it reached users)
 - **S:** Built reports that rendered as HTML and could be downloaded as PDF.
 - **A:** Charts rendered in HTML but were **blank in the PDF**. I dug in with
   **Puppeteer**, found the **chart scripts weren't injected into the window**
@@ -96,28 +216,46 @@ Bias for Action, Learn and Be Curious, Deliver Results.
   testing the PDF path → lesson = "now I test every output format/environment
   before shipping; added PDF export to the test checklist."
 
-### Story D — [Deadline / Deliver Results] → [FILL a real one]
-### Story E — [Disagreement / Earn Trust / Backbone] → [FILL a real one]
-### Story F — [Failure with a clear lesson] → [FILL — almost always asked]
+### Story 9 — "DB schema debate with senior dev" → Have Backbone; Disagree & Commit (+ Are Right A Lot, Dive Deep, Earn Trust)
+- **S:** We were designing the **DB schema** for the downtime/segment feature. A **senior
+  backend developer** (more experienced than me) wanted to keep **everything flat at the
+  root** of the schema.
+- **T:** As the full-stack dev who knew the feature's real requirements, I felt that
+  structure wouldn't hold up — I needed to make the case for a better data model.
+- **A:** Instead of just asserting my opinion, I **brought the data**: the downtime form
+  has a **splitting feature** where one downtime can have **multiple reasons/regions**. A
+  flat root schema couldn't represent that cleanly. So I argued **reasons should be an
+  array** and **machine details a nested object**. We debated it **respectfully**, and I
+  walked him through *why* the data model required it.
+- **R:** We agreed on my structure — **reasons as an array, machine details as an
+  object** — which fit the real requirements and made the data **cleaner and easier for
+  the whole team** to work with.
+- 💡 *Have Backbone = I spoke up (even to someone senior) with data, not opinion. If
+  asked the "disagree & COMMIT" version, mention I'd fully support the team's final call
+  even when it's not mine.*
 
 ---
 
 ## 5. "Tell me about yourself" (CCBP pattern)
 
-- I am **Basha**, completed my **bachelor's in [degree] in [year] from [college]**.
-- I developed a strong interest in **software development and AI**, building
-  real-world apps with **Python, React JS, Node.js, SQL**, and recently **GenAI/LLMs**.
-- My goal is to grow as a **software/AI engineer** building **intelligent,
-  problem-solving systems**.
-- I was attracted to Amazon's work building **AI-powered, customer-centric
-  products** — especially **using LLMs to solve real problems at scale**, like this
-  Intelligent Document Processing team.
-- For example, I took the initiative to build a **traceability system** with
-  **Neo4j + a GenAI chatbot** — learned Neo4j/Cypher from scratch, built it
-  end-to-end, shipped to production, and the **CEO was impressed**.
-- Apart from this, I'm a **[hobby]**.
+*(Exact CCBP pattern: education → how I got into coding + tech → goal → why the
+company + make lives better → initiative example + contribution + hobby.)*
+- I am **Basha**. I completed my **bachelor's in Mechanical Engineering in 2022**.
+- I developed a strong **interest in coding and AI**, and I learned technologies like
+  **Python, JavaScript, React, Node.js**, and recently **GenAI with LangChain**. Today,
+  I'm a **Senior Full Stack Developer**.
+- My goal is to grow as a **software engineer who builds AI-powered, problem-solving
+  products**.
+- I was really attracted to **Amazon's work building customer-centric, AI-powered
+  products** — and I've always wanted to **make people's lives easier with technology**.
+- For example, I took the initiative to build a **seafood traceability system** using a
+  **Neo4j knowledge graph and a GenAI chatbot** — I'd never used a graph database before,
+  so I learned it from scratch and shipped it to production. So I feel I can **contribute
+  to this team using my AI and full-stack skills** while growing as a professional. Apart
+  from this, I **play cricket**.
 
-> Keep it ~60–90 sec. End on "why this role." Practice out loud, don't memorize.
+> Flow (CCBP): education → coding interest + tech → goal → why Amazon + make lives
+> better → initiative + contribution + hobby. Keep it ~60–90 sec, say it naturally.
 
 ---
 
