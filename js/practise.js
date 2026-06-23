@@ -82,9 +82,6 @@ function isValid(s) {
 
   return stack.length ===0
 
-
-
-
 }
 
 
@@ -353,6 +350,69 @@ function check(name, got, want) {
   const ok = JSON.stringify(got) === JSON.stringify(want);
   console.log(`${ok ? "PASS" : "FAIL"}  ${name}  got=${JSON.stringify(got)} want=${JSON.stringify(want)}`);
 }
+
+
+function slidingWindow(array=[1,23,4,5,6,7,8], k=3) {
+    
+    let windowSum = 0;
+    
+    for(let i=0; i<k; i++) {
+        
+        windowSum += array[i];
+    }
+
+    let sum = windowSum;
+    
+    let startIndex = 0;
+    
+    const subArray = [];
+    
+    for(let i=k; i < array.length; i++) {
+        
+        windowSum = windowSum - array[i-k] + array[i];
+        
+        if(windowSum > sum) {
+            
+            sum = windowSum;
+            
+            startIndex = i - k + 1;
+        }
+        
+    }
+    
+    return {
+        sum,
+        startIndex,
+        subArray: array.slice(startIndex, startIndex+k),
+    }
+}
+
+console.log(slidingWindow())
+
+function smallestContigousSum(arr = [2, 1, 5, 2, 3, 2], S = 8) {
+    
+    let left =0;
+    
+    let sum = 0;
+    
+    let minLength = Infinity;
+      
+    for(let right =0; right < arr.length; right++) {
+        
+        sum += arr[right];
+        
+        while(sum >=S) {
+            minLength = Math.min(minLength, right - left + 1);
+            sum -= arr[left];
+            left++;
+        }
+    }
+    
+    return minLength === Infinity ? 0 : minLength;
+}
+
+
+console.log(smallestContigousSum())
 
 check("Q1 leetcode",     firstUniqChar("leetcode"), 0);
 check("Q1 loveleetcode", firstUniqChar("loveleetcode"), 2);

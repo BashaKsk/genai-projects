@@ -54,7 +54,9 @@ function Greeting({ name }) {
 
 // --- PARENT: owns the state (single source of truth) ----------
 export default function App() {
+
   // ⬆️ State LIFTED UP to the closest common parent of both children
+
   const [name, setName] = useState("");
 
   return (

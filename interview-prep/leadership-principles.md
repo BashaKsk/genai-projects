@@ -259,11 +259,56 @@ company + make lives better → initiative example + contribution + hobby.)*
 
 ---
 
-## 6. Questions to ASK the interviewer (always have 2–3)
-- "What does a typical day look like for this team?"
-- "What are the biggest technical challenges the team is solving right now?"
-- "How is success measured in this role in the first 6 months?"
-- "How does the team use LLMs today, and where is it heading?"
+## 5b. "Why Amazon?" (3 reasons: the work, the culture, growth — ~40 sec)
+
+- **The work:** This role uses **LLMs to solve real problems** — document & compliance
+  validation — which is exactly the **intersection of AI and problem-solving** I've been
+  building toward with my GenAI work.
+- **The culture:** Amazon's **customer obsession** resonates with me — I've always built
+  products to **make people's lives easier**, and Amazon does that at a scale I can learn
+  a lot from.
+- **Growth:** Amazon is known for **high standards and ownership** — I want an environment
+  that pushes me to **raise my bar** as an engineer.
+
+> Avoid generic "big company / good for career." Be specific (LLMs, customer obsession),
+> tie to your theme, and balance "what I get" with "what I'd contribute."
+
+---
+
+## 5c. "Why are you leaving your current job?" (~30 sec — move TOWARD, never away)
+
+> "I've genuinely **grown a lot** in my current role — from full-stack dev to leading
+> projects and working with GenAI, and I'm grateful for that. But I'm now looking for a
+> **bigger challenge**: to work on **AI and LLMs at a larger scale**, with a higher
+> engineering bar, on problems that impact more people. This role is exactly that next
+> step. So it's less about leaving and more about **moving toward where I want to grow.**"
+
+> ⚠️ CARDINAL RULE: **never bad-mouth** your current company/manager/team — it's a red
+> flag. Frame it as moving TOWARD growth, not running away from problems.
+
+---
+
+## 6. Questions to ASK the interviewer (pick 2–3; don't ask all)
+
+**Role / responsibilities:**
+- "What would my **key responsibilities be in the first 3–6 months**, and what would a
+  successful start look like?" *(my go-to, refined — shows I think about ramping up)*
+- "What does a typical day look like for a Support Engineer on this team?"
+- "How does the team balance **troubleshooting/support** with **building** new features?"
+
+**Tech / team (lead with one of these — shows interest in the work):** 🌟
+- "How does the team use **LLMs** today for document processing, and where is it heading?"
+- "What are the **biggest technical challenges** the team is solving right now?"
+
+**Growth / success:**
+- "How is **success measured** in this role in the first year?"
+- "What qualities make someone **successful** on this team?"
+
+**Close on this (practical):**
+- "What are the **next steps** in the interview process?"
+
+> Tips: ask **2–3**, lead with a tech/team one, close with "next steps". ⚠️ Don't ask
+> about salary / leave / perks in a phone screen — save for later rounds / HR.
 
 ---
 

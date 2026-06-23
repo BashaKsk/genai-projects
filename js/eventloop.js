@@ -30,33 +30,36 @@
 
 
 
-//     setTimeout(()=> {
-//         console.log("TimeOut");        
-//     }, 5000)
-
-//     console.log("Start");
-
-// setTimeout(() => {
-//     console.log("Timeout");
-// }, 0);
-
-// Promise.resolve().then(() => {
-//     console.log("Promise");
-// });
-
-// console.log("End");
-
+    // setTimeout(()=> {
+    //     console.log("TimeOut");        
+    // }, 5000)
 
 console.log("Start");
 
 setTimeout(() => {
-    console.log("Timeout Callback");
-}, 5000);
+    console.log("Timeout");
+}, 0);
 
-fetch("https://jsonplaceholder.typicode.com/todos/1")
-    .then((res) => res.json())
-    .then((data) => {
-        console.log("Fetch Callback");
-    });
+Promise.resolve().then(() => {
+    console.log("Promise");
+}).finally(() => {
+    console.log("finally");
+    
+});
 
 console.log("End");
+
+
+// console.log("Start");
+
+// setTimeout(() => {
+//     console.log("Timeout Callback");
+// }, 5000);
+
+// fetch("https://jsonplaceholder.typicode.com/todos/1")
+//     .then((res) => res.json())
+//     .then((data) => {
+//         console.log("Fetch Callback");
+//     });
+
+// console.log("End");
