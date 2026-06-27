@@ -97,5 +97,55 @@ if user_prompt:
             st.write('-----------')
 
 
+# ============================================================
+#  MODERN LCEL VERSION  (no langchain_classic — pure langchain-core)
+# ============================================================
+
+from langchain_core.runnables import RunnableParallel, RunnablePassthrough
+from langchain_core.output_parsers import StrOutputParser
+
+st.divider()
+st.header("🆕 Modern RAG (LCEL)")
+
+lcel_query = st.text_input("Ask the research papers (LCEL version)", key="lcel_query")
+
+
+def format_docs(docs):
+    """Turn a list of retrieved Documents into a single context string."""
+    return "\n\n".join(doc.page_content for doc in docs)
+
+
+if lcel_query:
+    if "vectors" not in st.session_state:
+        st.warning("Click 'Document embedding' above first to build the index.")
+    else:
+        retriever = st.session_state.vectors.as_retriever()
+
+        # Sub-chain that produces the answer from {context, input}
+        generate_answer = prompt | llm | StrOutputParser()
+
+        # Full chain: retrieve once, keep the docs, then generate the answer.
+        # .assign() adds a new key to the dict while passing everything else through.
+        rag_chain = RunnableParallel(
+            docs=retriever,
+            input=RunnablePassthrough(),
+        ).assign(
+            answer=lambda x: generate_answer.invoke(
+                {"context": format_docs(x["docs"]), "input": x["input"]}
+            )
+        )
+
+        start = time.process_time()
+        result = rag_chain.invoke(lcel_query)
+        print(f"LCEL response time: {time.process_time() - start}")
+
+        st.write(result["answer"])
+
+        with st.expander("Document similarity search (LCEL)"):
+            for doc in result["docs"]:
+                st.write(doc.page_content)
+                st.write("-----------")
+
+
 
 
