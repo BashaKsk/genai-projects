@@ -1,0 +1,16 @@
+# Core app
+streamlit==1.58.0
+
+# LangChain v1 (create_agent lives here) + community tools + Groq model
+langchain==1.3.1
+langchain-core==1.4.0
+langchain-community==0.4.2
+langchain-groq==1.1.2
+
+# Tools the agent uses
+wikipedia==1.4.0
+arxiv==2.1.3          # pinned: 4.x removed Search.results(), 1.4.x has an HTTP 301 bug
+ddgs==9.14.4          # DuckDuckGo search backend (renamed from duckduckgo-search)
+
+# Utilities
+python-dotenv==1.2.2
